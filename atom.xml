@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eva793.github.io/</id>
     <title>Gridea</title>
-    <updated>2019-10-07T15:48:42.286Z</updated>
+    <updated>2019-10-07T15:52:27.832Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eva793.github.io/"/>
     <link rel="self" href="https://eva793.github.io//atom.xml"/>
@@ -10,6 +10,256 @@
     <logo>https://eva793.github.io//images/avatar.png</logo>
     <icon>https://eva793.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[如何使用 Jacman 主题]]></title>
+        <id>https://eva793.github.io//post/2015-09-20-how-to-use-jacman</id>
+        <link href="https://eva793.github.io//post/2015-09-20-how-to-use-jacman">
+        </link>
+        <updated>2019-10-07T15:50:35.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="主题介绍">主题介绍</h2>
+<p>Jekyll-Jacman 是为 <a href="http://jekyllrb.com">Jekyll</a> 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。Jacman 始于 <a href="https://github.com/wuchong/jacman">Jacman</a> 移植而来。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="主题介绍">主题介绍</h2>
+<p>Jekyll-Jacman 是为 <a href="http://jekyllrb.com">Jekyll</a> 设计的一款清新且具有响应式的主题，拥有更丰富的特性并支持了很多的国内服务。Jacman 始于 <a href="https://github.com/wuchong/jacman">Jacman</a> 移植而来。</p>
+<!-- more -->
+<h2 id="配置指南">配置指南</h2>
+<p>Jacman 主题提供了丰富的配置属性，可以实现您对主题的自定义。配置文件<code>_config.yml</code>位于主题根目录下。本次更新对配置文件进行了较大调整，如您之前就使用了 Jacman，也需要您根据以下指南进行相应的修改。</p>
+<pre><code>##### 菜单
+menu:
+  主页: /
+  归档: /archives
+  关于: /about
+
+#### 控件
+widgets: 
+- category
+- tag
+- links
+- rss
+
+#### RSS 
+rss: /atom.xml 
+
+#### 图片相关
+imglogo:
+  enable: true               ## 是否显示网站 logo
+  src: img/logo.png        
+favicon: img/favicon.ico     ## 网站图标    
+apple_icon: img/jacman.jpg   ## 苹果设备上的图标，背景不要透明
+author_img: img/author.jpg   ## 网站底部的博主头像
+banner_img: img/banner.jpg   ## 博客顶部的图片
+
+close_aside: false      ##是否在文章页面自动关闭侧边栏
+
+#### 首页相关
+index:
+  expand: true              ## 首页文章是否展开。默认为展开式，显示 Read More。
+  excerpt_link: Read More    
+
+#### 作者信息
+author:
+  name: ## 作者名
+  intro_line1:  &quot;Hello ,I'm Larry Page in Google.&quot;    ## 网站底部的个人介绍
+  intro_line2:  &quot;This is my blog,believe it or not.&quot;  
+  weibo_verifier:  ## 微博秀的验证码
+  tsina:           ## 用于微博秀和微博分享
+  weibo:           ## 用于显示网站底部社交按钮，下同
+  douban:         
+  zhihu:  
+  email:     
+  twitter:   
+  github:     
+  facebook: 
+  linkedin:   
+  google_plus:   
+  stackoverflow:  
+
+
+#### 目录
+toc:
+  article: true   ## 是否在文章中显示目录
+  aside: true     ## 是否在侧边栏显示目录
+
+#### 友情链接
+links:
+  码农圈: https://coderq.com,一个面向程序员交流分享的新一代社区
+  Jark's Blog: http://wuchong.me
+  
+#### 评论
+duoshuo_shortname: 
+disqus_shortname:  
+
+#### 分享按钮
+jiathis:
+  enable: false   ## 默认使用主题内建分享
+  id:    
+  tsina: 
+  
+#### 网站统计
+google_analytics:
+  enable: false
+  id:            ## google analytics ID.
+  site:          ## 网站地址.
+baidu_tongji:
+  enable: false
+  sitecode:      ## 百度统计站点特征码
+cnzz_tongji:
+  enable: false
+  siteid:        ## CNZZ统计站点ID
+
+#### 杂项
+ShowCustomFont: true  
+fancybox: true        
+totop: true           
+
+#### 自定义搜索
+google_cse: 
+  enable: false
+  cx:  
+baidu_search:    
+  enable: false
+  id:   
+  site: http://zhannei.baidu.com/cse/search 
+tinysou_search:     ## http://tinysou.com/
+  enable: false
+  id: &quot;4ac092ad8d749fdc6293&quot; 
+</code></pre>
+<h3 id="属性功能">属性功能</h3>
+<ul>
+<li><strong>菜单 menu</strong><br>
+默认没有启用 <code>/tags</code> 和 <code>/categories</code>页面，如果需要启用请在博客目录下分别建立<code>tags</code> 和 <code>categories</code>文件夹每个文件夹中分别包含一个<code>index.md</code>文件。内容为：</li>
+</ul>
+<pre><code>layout: tags (或categories)
+title: tags (或categories)
+---
+</code></pre>
+<p>      因为主题中已经内置了这两个页面的模板，所以他们会被正确的解析出来。</p>
+<ul>
+<li><strong>控件 widgets</strong><br>
+提供了7种小工具。包括标签、分类、RSS、友情链接、微博秀。</li>
+</ul>
+<p><strong>友情链接</strong>：友情链接的网址添加可以在<code>links</code>属性下添加。</p>
+<p><strong>微博秀</strong>：需要注意的是，如果要启用微博秀，您必须填上<code>author</code>属性下<code>tsina</code>和<code>weibo_verifier</code>的值，前者是您微博ID，后者是您微博秀的验证码，访问 http://app.weibo.com/tool/weiboshow 在如下图位置，可以获得您的 verifier，如：我的是<code>b3593ceb</code>。<br>
+<img src="http://ww1.sinaimg.cn/large/81b78497jw1emegd6b0ytj209204pweu.jpg" alt=""></p>
+<p>如果要关闭侧边栏，将<code>close_aside</code>置为<code>true</code>，就会在博文页面自动关闭侧边栏。</p>
+<ul>
+<li>
+<p><strong>图片相关 Image</strong><br>
+本主题可以设置网站相关图片，例如网站图标（<code>favicon</code>）、网站logo（<code>imglogo</code>）、作者头像（<code>author_img</code>）。建议启用网站logo，格式建议为<code>.svg</code>或<code>.png</code>格式。同时建议提供配套的 favicon 以及在苹果设备上的图标<code>apple_icon</code>（背景不要透明）。</p>
+</li>
+<li>
+<p><strong>首页显示模式 Index</strong><br>
+目前首页的显示模式支持两种，一种是原先的卡片式（前往 <a href="http://wuchong.me/jacman">Demo</a> 预览），另一种是类似官方主题的文章展开式（<a href="http://wuchong.me">本站</a>即采用的这种）。两者各有优劣，前者首页加载速度更快，后者文章内容更能吸引读者。主题默认采用后一种展开式，如需开启第一种卡片式，请设置<code>index</code>属性下的<code>expand: false</code>。</p>
+</li>
+</ul>
+<p>卡片式的文章摘要是截取文章内容的前140个字，也可以自己总结<code>description</code>并将其放在开头的<code>front-matter</code>中。展开式的文章摘要就是使用<code>&lt;!-- more --&gt;</code>截取了。</p>
+<ul>
+<li>
+<p><strong>作者信息 author</strong><br>
+作者信息，建议尽量填写完整。其中<code>tsina</code>是你的新浪微博ID，不同于用户名或微博主页地址。启用这个属性后，其他用户在微博上分享你文章的同时会自动@你。同时它和<code>weibo_verifier</code>一起作用生成微博秀。<code>intro_line1</code>和<code>intro_line2</code>是网站底部的个人介绍。<code>weibo</code>、<code>twitter</code>、<code>facebook</code>等是用来显示网站右下角的社交按钮的，如下图所示。<br>
+<img src="http://ww4.sinaimg.cn/large/81b78497jw1emgscr3575j2078050jrc.jpg" alt=""></p>
+</li>
+<li>
+<p><strong>目录 toc</strong><br>
+是否启用在文章中或侧边栏中的目录功能。二者可以都为<code>true</code>或都为<code>false</code>。同时，如果你希望在特定的某一篇文章中关闭目录功能你可以在文章文件开头中的<code>front-matter</code>中加上一行<code>toc: false</code>。</p>
+</li>
+<li>
+<p><strong>评论 comments</strong><br>
+填写<code>duoshuo_shortname</code><a href="http://duoshuo.com/">多说</a>的用户名，启用多说评论系统。在大陆地区更好用的评论系统。</p>
+</li>
+</ul>
+<p>填写<code>disqus_shortname</code><a href="http://disqus.com/">disqus</a> 的用户名，启用 disqus 评论系统。国际上更广泛使用的评论系统。设置博客根目录下的<code>_config.yml</code>文件中的<code>disqus_shortname</code>同样也能开启该功能。</p>
+<ul>
+<li>
+<p><strong>加网分享 jiathis</strong><br>
+<a href="http://www.jiathis.com/">加网</a>分享系统。默认关闭，因为主题已经内置了原生的分享功能。</p>
+</li>
+<li>
+<p><strong>网站统计 Analytics</strong><br>
+<code>google_analytics</code>：Google Analytics追踪代码。请注意：Google Analytics已经升级到了Universal Analytics。请先前往后台升级你的Google Analytics版本后再启用追踪代码，更多信息请<a href="https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN">点击这里</a>了解。</p>
+</li>
+</ul>
+<p><code>baidu_tongji</code>：百度统计功能。需要填写站点特征码<code>sitecode</code>，在<a href="http://tongji.baidu.com/web/welcome/login">官网</a>注册并配置站点后，获取特征码。特征码可以在「网站中心」-&gt; 「代码获取」中查看，如下图所示的<code>e6d1f421bbc9962127a50488f9ed37d1</code>，注意去掉前面的<code>3F</code>。<br>
+<img src="http://ww4.sinaimg.cn/large/81b78497jw1emf4v6qf91j20kf07sq8v.jpg" alt=""></p>
+<p><code>cnzz_tongji</code>：站长统计功能。需要填写站点ID<code>siteid</code>，同理在<a href="http://www.cnzz.com">站长官网</a>注册并配置站点后获得。</p>
+<ul>
+<li>
+<p><strong>数学公式 mathjax</strong><br>
+主题支持写 LaTex 数学公式。只需要在文章文件开头的<code>front-matter</code>中，加上一行<code>mathjax: true</code>，即可在文中写 LaTex 公式。</p>
+</li>
+<li>
+<p><strong>图片浏览 fancybox</strong><br>
+默认关闭，如果你经常发表 Gallery 类型的文章，那么请设置为<code>true</code>。</p>
+</li>
+<li>
+<p><strong>返回顶部 totop</strong><br>
+右下角<code>返回顶部</code>按钮，默认开启。</p>
+</li>
+<li>
+<p><strong>自定义搜索 Search</strong><br>
+<code>baidu_search</code>：如果开启百度站内搜索需要登录 <a href="http://zn.baidu.com/">百度站内搜索</a>，配置好你的站点，并开启站内搜索获取搜索ID，另外<code>site</code>属性可以填默认值，也可以填自己做了CNAME的二级域名，更详细的可以阅读<a href="http://gengbiao.me/hexo/hexo%E6%B7%BB%E5%8A%A0%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/">这篇博客</a>了解。</p>
+</li>
+</ul>
+<p><code>google_cse</code>：如果开启谷歌自定义搜索需要先登录 <a href="https://www.google.com/cse/">Google CSE</a>，配置好你的站点，并获得此自定义搜索的ID。此外你需要在博客目录下建立<code>search</code>文件夹并包含一个<code>index.md</code>文件。内容为：</p>
+<pre><code>layout: search
+title: search
+---
+</code></pre>
+<p><code>tiny_search</code>: 如果要开启<a href="http://tinysou.com/">微搜索</a>，需要先注册一个帐号，配置一个Engine，将Engine的Key填入配置文件中的<code>id</code>即可。</p>
+<h2 id="常见问题">常见问题</h2>
+<ul>
+<li>
+<p><strong>Q：图片默认都是居左的，我怎么设置能让图片居中呢？</strong></p>
+<blockquote>
+<p>使用 <code>&lt;img src=&quot;&quot; style=&quot;display:block;margin:auto&quot;/&gt;</code>的HTML标签。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Q：如何建立一篇图片类文章（Gallery Post）？</strong></p>
+<blockquote>
+<p>直接新建一个 Markdown 文件，将其<code>front-matter</code>修改为如下，即可看到主题为图片类文章提供的样式。</p>
+<pre><code></code></pre>
+</blockquote>
+<hr>
+<p>layout: photo<br>
+title: Gallery Post<br>
+photos:</p>
+<ul>
+<li>http://i.minus.com/ibobbTlfxZgITW.jpg</li>
+<li>http://i.minus.com/iedpg90Y0exFS.jpg</li>
+</ul>
+<hr>
+<blockquote>
+<pre><code></code></pre>
+</blockquote>
+</li>
+<li>
+<p><strong>Q：我在配置文件中给某一项设置了值，但为什么总是看不到效果啊？</strong></p>
+<blockquote>
+<p><code>_config.yml</code>文件中的每个属性值前面必须留一个空格，建议在 Sublime/Notepad++ 中开启显示所有空格模式。另每篇文章的 <code>front-matter</code> 也要注意这个问题。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Q：怎么提意见和建议？</strong></p>
+<blockquote>
+<p>主题还在不断完善中，欢迎 <a href="https://github.com/Simpleyyt/jekyll-jacman/issues">open issue</a> 来提建议，参与讨论。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Q：为什么我修改了配置文件/发表了博文，解析出来的却是乱码呢？</strong></p>
+<blockquote>
+<p>请将你的配置文件/markdown文件保存成 <code>UTF-8</code> 格式。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Q：为什么开启了微博秀后，显示是空白的，没有内容展示？</strong></p>
+<blockquote>
+<p>每次修改参数都会这样，需要多刷新几次或者上传到服务器上就好了。</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【DOS】DOS命令大全02]]></title>
         <id>https://eva793.github.io//post/dos-dos-ming-ling-da-quan-02</id>
@@ -1820,6 +2070,254 @@ pause
         </link>
         <updated>2019-10-07T15:23:50.000Z</updated>
         <content type="html"><![CDATA[<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Software】使用Github搭建个人博客]]></title>
+        <id>https://eva793.github.io//post/2019-02-25-【Software】使用Github搭建个人博客</id>
+        <link href="https://eva793.github.io//post/2019-02-25-【Software】使用Github搭建个人博客">
+        </link>
+        <updated>2019-02-25T13:57:00.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>博客模版下载地址</strong><br>
+<a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a><br>
+<a href="https://github.com/Simpleyyt/jekyll-jacman">https://github.com/Simpleyyt/jekyll-jacman</a><br>
+<a href="https://github.com/codeasashu/hcz-jekyll-blog">https://github.com/codeasashu/hcz-jekyll-blog</a></p>
+<p><strong>一、创建Github仓库</strong><br>
+先登陆Github账号,如下图新建一个仓库<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/tmAY1*Uz4Bv*DCDMg1UA5prkQdNhvbSqzH8eGixu4KY!/o/dDYBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=qwJsAasCbAEDEDU!&amp;tl=1&amp;su=044720545&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/Gwbkp2XqrxRugyLAEdRooXO7La.eGhpfI96OgryK66I!/o/dDYBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=egJSAXoCUgEDEDU!&amp;tl=1&amp;su=028536049&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<code>Repository name就是你的仓库名,这个仓库名必须按(帐户名.github.io)格式来写,到时候访问的地址就是这个了,至于下面的Initialize this repository with a README( 使用 README.md 初始化仓库这将让您可以立刻克隆该仓库到您的电脑。如果您要提交已有的仓库，请忽略这个选项)</code><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/qa0AWqGcOyEpRRovsf6vNPtYdYhTmPWtZvhdyobwfl8!/o/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXYAlYF2AIDIAU!&amp;tl=1&amp;su=021208833&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>二、将GitHub仓库克隆到本地</strong><br>
+1.在自己的电脑上找一个目录来作为你本地的仓库,比如我的是”D:\GitHub”,那么就在GitHub文件夹下初始化仓库.<br>
+2.初始化仓库的方式有两种,一种是用git的图形化界面来创建,另一种是用git命令来初始化,这里我使用图形化界面的方式来创建(先下载desktop github然后安装，desktop github新版不支持Windows 32位系统)<br>
+desktop github下载地址<br>
+<a href="https://desktop.github.com/">https://desktop.github.com/</a><br>
+登入到GitHub<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/vQMvgZ7pfIjDE.MzZsaGcfewu3JSXJO11eJF.nyvPHE!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=vwOVAr8DlQIDMBU!&amp;tl=1&amp;su=0182371809&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+向GitHub提交统计数据可不勾<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/3eP6kBUk7CBSk6SLUf9CZycRKQBf7*5YJEzrxrbq2GI!/o/dFMBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=wgOVAsIDlQIDMBU!&amp;tl=1&amp;su=0110439745&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/HSuIxscKJqTIjyvDtQQnbndT5ui030UeV17KKEkS3TU!/o/dMIAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXXAlYF1wIDEDU!&amp;tl=1&amp;su=017684945&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/rUJA*MjAXmz.RE.GTWNHsJ9HdRrej6ehuqEedjScIAU!/o/dDQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=8gSgAvIEoAIDIAU!&amp;tl=1&amp;su=0205845697&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+克隆中等会<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/EWV5ilSfUz.*MBff6P*t6GbkoRYdM*WDjMZjJ*fRf8g!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXYAlYF2AIDEDU!&amp;tl=1&amp;su=0159959169&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+完成<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/H8bG5Ein8awOph0KkJsylp6qT8Q9XU9MqXj481JdISU!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXUAlYF1AIDEDU!&amp;tl=1&amp;su=0230474961&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<strong>三、将网页传到GitHub上</strong><br>
+1.在本地的路径下放入文件<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/CyAjfqukp1304o7bIVzBC.rOYddUrXSzAdM23JaVf2U!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=2gJcAtoCXAIDEDU!&amp;tl=1&amp;su=0263285937&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+提交备注（给提交的文件添加个摘要信息）<br>
+furst push<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/pvI3WikkaVH1QgeLzXMEPNVwyCZOTfNe2xhHQyXiqog!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXYAlYF2AIDEDU!&amp;tl=1&amp;su=0129619153&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+2.然后回到网页这刷新下就可以了<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/it7SSmFD0VZwvyDJFYtilXimfk*HRs8d50*T.d*sONM!/o/dDQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXUAlYF1AIDEDU!&amp;tl=1&amp;su=0214101793&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<strong>四、浏览自己的网页</strong><br>
+访问自己上传的网页(点自己的仓库-设置  往下拉)<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/2dAtNdcTecMw7gPAjjeNzkxdCQcoWN3UMUZhe9HrjWg!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=8QOjAPEDowADEDU!&amp;tl=1&amp;su=0232018353&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+然后就可以通过GitHub提供的这个网址访问自己的博客了<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/VJ0fICRzY43ZK591.anx8zfW3sMyNS7VLH0C4VtomAY!/o/dFQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=wAL7AMAC.wADEDU!&amp;tl=1&amp;su=0268041425&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/.DCDzaYjz8f17vCeRiWeAHcC33QOwk4l1K4fGbrk5ak!/o/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXaAlYF2gIDEDU!&amp;tl=1&amp;su=0166572849&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>【需要使用Markdown编辑器写博客】</strong><br>
+第一步:去JekyllThemes下载一个自己喜欢的模板<br>
+第二步:按照之前的步骤把下载好的模板上传到自己的Github仓库中<br>
+第三步:在_posts文件夹中放入自己写好的博客,文件名必须是日期-标题名,例如:2019-01-01-我的第一篇博客<br>
+第四步:上传博客到Github中即可访问自己的博客<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/dV0FGUcNRaFWFKAAsldsvxZ7wFjL93nalP5vWHUWa6c!/o/dLkAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=2wO1AdsDtQEDEDU!&amp;tl=1&amp;su=0119672833&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【Software】GitHub 汉化插件安装]]></title>
+        <id>https://eva793.github.io//post/2019-02-24-【Software】GitHub 汉化插件安装</id>
+        <link href="https://eva793.github.io//post/2019-02-24-【Software】GitHub 汉化插件安装">
+        </link>
+        <updated>2019-02-24T13:49:00.000Z</updated>
+        <content type="html"><![CDATA[<p>1.下载 Tampermonkey_v4.2.7.crx 插件<br>
+<a href="http://www.52cik.com/github-hans/Tampermonkey_v4.2.7.crx">http://www.52cik.com/github-hans/Tampermonkey_v4.2.7.crx</a><br>
+2.在 chrome 里打开 chrome://extensions/ 这里地址(浏览器需登录，页面打开开发者模式开关)<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/CfMnXR9K2C50JAZqD09KAae3nG5YRvqEDCrR9wTdsM8!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgInAQAAAAADEDs!&amp;tl=1&amp;su=0250883697&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+3.把刚才下载到的 Tampermonkey_v4.2.7.crx 拖进去就好了<br>
+4.接着点浏览器右上角的插件图标，选择 “添加新脚本...”<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/JKTEOEi*paGKt2g00iOaGJLD.yvimSG.VqB8..Hvg.M!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgInAQAAAAADEDs!&amp;tl=1&amp;su=010322961&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+5.然后将 <a href="https://github.com/52cik/github-hans/blob/gh-pages/main.js">https://github.com/52cik/github-hans/blob/gh-pages/main.js</a>源码全选复制进去覆盖掉保存刷新下网页完成(源码有两处错误)<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/gaxqdnlqhbp0G.B7L.8DkWdhGUWvVadrkdaNIBUoKwY!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgIoAQAAAAADEDQ!&amp;tl=1&amp;su=0162232145&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+在箭头e的后面添加上;（英文状态下输入）<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/Y5.rb24m.1irT.yimy5B1q4XJKlqqDgvvfpZt3H5IQo!/b/dLYAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgInAQAAAAADEDs!&amp;tl=1&amp;su=0153017089&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://a1.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/b5nUsMPPmw1UTxO*ZV7WMRLzeqboPOHDLzOoNZ62JDY!/b/dLgAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgInAQAAAAADEDs!&amp;tl=1&amp;su=0168626897&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+还没谷歌自带的翻译好用。。。(在网页右键有个翻译网页选项)<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/T*fcWwq.wlIBm27dNR1i1UzfgKj0IKxn0twVC2r*d90!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgInAQAAAAADEDs!&amp;tl=1&amp;su=0254988353&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>谷歌插件</strong><br>
+1.新标签页 Infinity插件<br>
+功能介绍链接 <a href="https://cn.infinitynewtab.com/">https://cn.infinitynewtab.com/</a></p>
+<p>2.恢复关闭标签插件（可以快速回到刚刚不小心关掉的网页）<br>
+<a href="https://chrome.google.com/webstore/detail/simpleundoclose/emhohdghchmjepmigjojkehidlielknj">https://chrome.google.com/webstore/detail/simpleundoclose/emhohdghchmjepmigjojkehidlielknj</a></p>
+<p>3.油猴插件 Tampermonkey<br>
+谷歌浏览器用户脚本管理插件<br>
+可以通过安装脚本实现破解vip视频、百度网盘资源直接下载等实用功能，堪称神器。<br>
+功能介绍链接 <a href="http://dwz.cn/5sxn9wxZ">http://dwz.cn/5sxn9wxZ</a></p>
+<p>4.图片助手(ImageAssistant)插件<br>
+网页图片提取、图片筛选<br>
+功能介绍链接 <a href="http://dwz.cn/FSsOjS6R">http://dwz.cn/FSsOjS6R</a></p>
+<p>5.Clear-Cache<br>
+一键清除浏览器缓存<br>
+开发和测试必备插件<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237429862">https://u14797164.pipipan.com/fs/14797164-237429862</a></p>
+<p>6.网站技术分析WhatRuns插件<br>
+能分析当前网页设计架构<br>
+功能介绍链接 <a href="http://dwz.cn/VvJTo1sT">http://dwz.cn/VvJTo1sT</a><br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237421488">https://u14797164.pipipan.com/fs/14797164-237421488</a></p>
+<p>7.购物比价插件<br>
+全网自动比价工具，各大电商网站比价、180天价格历史跟踪、降价提醒<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237427693">https://u14797164.pipipan.com/fs/14797164-237427693</a></p>
+<p>8.下载+<br>
+Chrome的下载管理在二级菜单里，进去很不方便。装了这个插件就可以直接看和管理，很好用。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237427303">https://u14797164.pipipan.com/fs/14797164-237427303</a></p>
+<p>9.跨平台复制粘贴Markdown-Here插件<br>
+超好用的一款插件，强烈推荐！！有个它再也不用担心编辑器不支持markdown语法了，写好以后直接一键转换。而且也是一个跨平台神器，比如我们可以把简书写好的文章（带md语法）直接复制到微信公众号，然后一键转换，格式几乎无变化！<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237430000">https://u14797164.pipipan.com/fs/14797164-237430000</a></p>
+<p>10.多个窗口合成一个窗口OneTab插件<br>
+这个插件很实用<br>
+有的时候打开一堆网页但是又不想关，看着很闹心<br>
+可以把这些网页合到一个里面<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237428194">https://u14797164.pipipan.com/fs/14797164-237428194</a></p>
+<p>11.识别字体WhatFont插件<br>
+鼠标放到网页上面的某个字上就可以知道是什么字体</p>
+<p>12.吸取网页颜色插件<br>
+ColorZilla、ColorPick Eyedropper两款插件<br>
+鼠标放到对应地方就识别该颜色，这个很适合前端开发人员</p>
+<p>13.Adblock Plus：免除广告困扰<br>
+只要是使用 Chrome 的人都应该安装的一款扩展应用，可以帮助你屏蔽几乎大部分网页广告，如果存在漏网之鱼，还可以手动添加到屏蔽列。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237412331">https://u14797164.pipipan.com/fs/14797164-237412331</a></p>
+<p>14.关灯看视频<br>
+有时候网速太差，全屏以后分辨率很低，可以试试这个，可以让周围页面变暗从而达到最好的视觉效果。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237427954">https://u14797164.pipipan.com/fs/14797164-237427954</a></p>
+<p>15.二维码(QR码)生成器<br>
+在线的二维码生成器。可以把当前的网页直接生成二维码，进行编辑。还可以把文字生成二维码，这个很重要！<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237430273">https://u14797164.pipipan.com/fs/14797164-237430273</a></p>
+<p>16.一键管理所有扩展<br>
+Chrome其实很占内存，尤其当插件装多了以后会卡顿。不过有个这个就不用担心，用不到的时候把插件关掉就行了，随时开随时关。<br>
+离线版下载地址：<a href="https://chrome.google.com/webstore/detail/%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E6%89%A9%E5%B1%95/lboblnfejcmcaplhnbkkfcienhlhpnni/related?utm_source=www.crx4chrome.com">https://chrome.google.com/webstore/detail/一键管理扩展/lboblnfejcmcaplhnbkkfcienhlhpnni/related?utm_source=www.crx4chrome.com</a></p>
+<p>17.Imagus<br>
+图片放大镜的功能！在体验了360浏览器、猎豹浏览器之后，特地去找的扩展！微博党的利器！这个不管能鼠标悬停放大图片，同时，对链接等也有预览。提供很多功能选项进行设置。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237429468">https://u14797164.pipipan.com/fs/14797164-237429468</a></p>
+<p>18.眼不见心不烦（新浪微博）<br>
+Chrome就是满分评价，可见这扩展真是良心扩展啊！微博党的福音！在浏览器端，自己通过这个插件进行设置，可以将热门微博、会员推广等等内容窗口都给屏蔽了！还我们一个干净、舒服的微博环境！推荐！！！<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237428838">https://u14797164.pipipan.com/fs/14797164-237428838</a></p>
+<p>19.Lucidchart Diagrams - Desktop：在线绘制多种图表<br>
+这个扩展程序是一款多功能绘制程序，支持绘制流程图，思维导图，版面设计等，并且有在线和离线两种模式，可谓功能强大。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-238588636">https://u14797164.pipipan.com/fs/14797164-238588636</a></p>
+<p>20.Search by Image：强大的以图搜图<br>
+Chrome 又一神器，结合 Google 以图搜图，可以快速让你找到一张图片的来源、其他尺寸、或者寻找到相似的图片，毕竟在搜索方面，还是 Google 做的最好。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-238590409">https://u14797164.pipipan.com/fs/14797164-238590409</a></p>
+<p>21.Postman<br>
+相信开发者朋友一定知道这款插件，这是一款强大的 API &amp; HTTP 请求调试工具，它不仅可以调试简单的 HTML、CSS 以及脚本等简单的网页基本信息，这款 Chrome 插件甚至还能发送几乎所有的 HTTP 请求，可谓是 Web 开发者的一大利器。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237420917">https://u14797164.pipipan.com/fs/14797164-237420917</a></p>
+<p>22.Code Cola<br>
+Code Cola是一个可视化编辑在线页面css样式的chrome插件。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237430108">https://u14797164.pipipan.com/fs/14797164-237430108</a></p>
+<p>23.WEB前端助手<br>
+FE助手：包括字符串编解码、图片base64编码、代码压缩、美化、JSON格式化、正则表达式、时间转换工具、二维码生成器、编码规范检测、页面性能检测、栅格检测、JS运行效率分析等。<br>
+离线版下载地址：<a href="https://u14797164.pipipan.com/fs/14797164-237430197">https://u14797164.pipipan.com/fs/14797164-237430197</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【System】Windows7局域网共享打印机设置]]></title>
+        <id>https://eva793.github.io//post/2019-01-19-【System】Windows7局域网共享打印机设置</id>
+        <link href="https://eva793.github.io//post/2019-01-19-【System】Windows7局域网共享打印机设置">
+        </link>
+        <updated>2019-01-19T11:48:00.000Z</updated>
+        <content type="html"><![CDATA[<p>Windows7局域网共享打印机设置分两步：<br>
+（不同运营商和不同网段可以利用无线路由器组成局域网进行打印机共享）</p>
+<p>①目标打印机设置（关闭密码保护共享和启动Guest用户、共享打印机选项设置）<br>
+②在其它计算机上添加目标打印机<br>
+<strong><code>注意事项：</code></strong><br>
+<strong><code>1.路由器或光钎猫接口</code></strong><br>
+<strong><code>2.网络状态是否相同</code></strong><br>
+<strong><code>3.防火墙</code></strong><br>
+<strong><code>4.关于共享之类的设置是否恰当</code></strong></p>
+<p><strong>一、关闭密码保护共享和启用Guest用户</strong><br>
+1、开启“网络和共享中心”，选中“更改高级共享设置”。<br>
+2、在“启用网络发现”和“启用文件和打印机共享”前勾选，再保存。<br>
+3、在“密码保护的共享”-“关闭密码保护共享”。<br>
+4、右击“计算机图标”——选择“管理”<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/qrhdY.z*frSfFcuZrjiIDj6QRT0OmLzM5dgCvCQT*Ok!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgIzAQAAAAADEC8!&amp;tl=1&amp;su=0132571249&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>5、在“本地用户和组”中找到“用户”，再找到“Guset”<br>
+<img src="http://a2.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/VLuy0cxylxbqriNzVZSeDvhCzIUo2payFKxMO53yTeI!/b/dDEBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=gQJJAQAAAAADEP4!&amp;tl=1&amp;su=0237801057&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>6、右击“Guest”——选择属性——把“账户已禁用”前的勾去掉，点击确定<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/lLYHzgeyEZ6lrgIcthh1vq.hlHh2F.XawGKK*wdTBFU!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLlAQAAAAADEPk!&amp;tl=1&amp;su=0259013153&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>目标打印机共享设置（如果同时需要给32、64为系统做共享打印机，两个版本驱动都需要安装）</strong><br>
+7、“开始”—选择“设备和打印机”<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/YjD00Fy.mnyOzarXeco2PEgA6uNv.afiJi4ZMAeMWU0!/b/dFMBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=mAEAAgAAAAADEK4!&amp;tl=1&amp;su=0148658705&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>8、选中目标打印机（前提是打印机已正确安装），单击鼠标右键打开菜单，选择“打印机属性”<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/y8ZQgzXNFqCZIV5pGSAc7TyrwLVcgsqngLjHg7WRJqU!/b/dDcBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLhAQAAAAADIM0!&amp;tl=1&amp;su=090298161&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>9、 选择“共享”选项卡，选中“共享这台打印机”并设置共享名，然后确定。<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/QJPuEfgfHgYDUNoMbpSxSK6fubcZtlA7sdfBTrdUdMM!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLdAQAAAAADEME!&amp;tl=1&amp;su=0190120097&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>二、在其它计算机添加目标打印机</strong></p>
+<p>1、 打开“资源管理器”，在地址栏输入<code>\</code>共享打印机的IP地址， 例如：<code>\\192.168.1.4</code><br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/uQX508UBl1Arns.LvOk05qIFReBZsKsh8Le9P0WH.gw!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgIdAQAAAAADEAE!&amp;tl=1&amp;su=0122010721&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>注：有些 XP 系统可能一些策略没有打开，会出现不能正常访问的情况，可试着做如下的处理：<br>
+1） 在组策略中设置，安全策略。开始--运行--gpedit.msc--计算机配置--windows 设置--安全设置--本地策略--“用户权力指派”，双击右边的“从网络访问此计算机”，保证其中有 Everyone， 再双击左边的“拒绝从网络访问此计算机”，保证其是空的。<br>
+2）选择左边的“本地策略”-“安全选项”<br>
+a.确认右边的“网络访问：本地帐户的共享与安全模式”为“经典”；<br>
+b.确认右边的“ Microsoft 网络客户：为通讯启用数字签名（总是）”为“已停用”；<br>
+c.确认右边的“ Microsoft 网络客户：为通讯启用数字签名（如果服务器允许）”为“已启用”；<br>
+d.确认右边的“ Microsoft 网络服务器：为通讯启用数字签名（总是）”为“已停用”；<br>
+e.确认右边的“ Microsoft 网络服务器：为通讯启用数字签名（如果服务器允许）”为“已启用”。</p>
+<p>2、 选中共享打印机， 单击鼠标右键打开快显菜单，选择“连接”， 进行安装。<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/ayJ4fOKYcjYwlh1YVUqSrAWyLLzPswXgmld00CDNGcM!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgJwAQAAAAADEGw!&amp;tl=1&amp;su=058591153&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>3、“控制面板”-“硬件和声音”-“设备和打印机”，选择刚装好的打印机， 单击鼠标右键，选择“打印机属性”，单击“打印测试页”， 正常打印， 说明安装成功。<br>
+<img src="http://a1.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/J3nyNT1V6qjpGNTlefQDWjAQaFpjPRNMGZcQ9QCcu2g!/b/dFQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=JAISAgAAAAADEAM!&amp;tl=1&amp;su=078400817&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/*zyOXddAGWu6.3kjM2QLw3df1AMjHaim5VT*nACptO4!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLaAQAAAAADEMY!&amp;tl=1&amp;su=091155473&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【System】Win7设置局域网共享]]></title>
+        <id>https://eva793.github.io//post/2019-01-19-【System】Win7设置局域网共享</id>
+        <link href="https://eva793.github.io//post/2019-01-19-【System】Win7设置局域网共享">
+        </link>
+        <updated>2019-01-19T11:46:00.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>Win7如何设置局域网共享一：</strong><br>
+1、开启“网络和共享中心”，选中“更改高级共享设置”。<br>
+2、在“启用网络发现”和“启用文件和打印机共享”前勾选，再保存。<br>
+3、打开“计算机”右键菜单，选中“管理”。<br>
+<img src="http://a1.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/9tUV67Z4g5HoDk*l7VsdzGtrZkDkJ11nKFDj3jbBpGw!/b/dMAAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=FgJHAgAAAAADIFQ!&amp;tl=1&amp;su=0248031665&amp;tm=1553338800&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+4、在管理中，按顺序点击：本地用户和组—用户—Guest ，双击Guest 。<br>
+5、在Guest中，将“账户已禁用”前面或后面的勾选，再确定。<br>
+6、在点击开始菜单，输入 secpol.msc 按回车。<br>
+7、打开“本地安装策略”之后，按顺序点击：本地策略—用户权限分配—拒绝从网络访问这台电脑，再双击“拒绝从网络访问这台电脑”。<br>
+8、在“拒绝从网络访问这台电脑”中，选中“Guest ”，将它删除，再确定。<br>
+9、按顺序点击：本地策略—安全选项—网络访问：本地账户的共享和安全模型，再双击“网络访问：本地账户的共享和安全模型”。<br>
+10、在本地账户的共享和安全模型中，选中“仅来宾—对本地用户进行身份验证，它身份为来宾”，再退出。<br>
+11、找到局域网共享的文件或文件夹，右键菜单按顺序选中：共享—特定用户。<br>
+12、在下拉菜单中选中&quot;Guest&quot; ，点击“共享”。<br>
+13、这样就完成啦。</p>
+<p><strong>Win7如何设置局域网共享二：</strong><br>
+1、无论默认的简单共享还是高级共享，右击共享的文件夹，点击属性-共享。<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/tjqC2iwUaZrjF2JwWQNB3MYfmoDdvej3JAcxSn3NRUo!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=hgGmAQAAAAADEBU!&amp;tl=1&amp;su=0249115537&amp;tm=1553338800&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+2、点击高级共享<br>
+3、按如下设置：<br>
+(1)勾选共享此文件夹。<br>
+(2)在共享前后加上 “<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">号</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">即</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">隐</mi><mi mathvariant="normal">藏</mi><mi mathvariant="normal">该</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">夹</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">其</mi><mi mathvariant="normal">他</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">该</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">夹</mi><mi mathvariant="normal">。</mi><mo>(</mo><mn>3</mn><mo>)</mo><mi mathvariant="normal">用</mi><mi mathvariant="normal">户</mi><mi mathvariant="normal">限</mi><mi mathvariant="normal">制</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">若</mi><mi mathvariant="normal">只</mi><mi mathvariant="normal">给</mi><mn>2</mn><mi mathvariant="normal">个</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">设</mi><mi mathvariant="normal">定</mi><mn>2</mn><mi mathvariant="normal">。</mi><mn>4</mn><mi mathvariant="normal">、</mi><mi mathvariant="normal">若</mi><mi mathvariant="normal">共</mi><mi mathvariant="normal">享</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">较</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">担</mi><mi mathvariant="normal">心</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">被</mi><mi mathvariant="normal">破</mi><mi mathvariant="normal">解</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">话</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">后</mi><mi mathvariant="normal">面</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">些</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">或</mi><mi mathvariant="normal">英</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">但</mi><mi mathvariant="normal">切</mi><mi mathvariant="normal">勿</mi><mi mathvariant="normal">告</mi><mi mathvariant="normal">诉</mi><mi mathvariant="normal">别</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">全</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">。</mi><mn>5</mn><mi mathvariant="normal">、</mi><mi mathvariant="normal">若</mi><mi mathvariant="normal">共</mi><mi mathvariant="normal">享</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">修</mi><mi mathvariant="normal">改</mi><mi mathvariant="normal">权</mi><mi mathvariant="normal">限</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">话</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">点</mi><mi mathvariant="normal">击</mi><mi mathvariant="normal">权</mi><mi mathvariant="normal">限</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">对</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">权</mi><mi mathvariant="normal">限</mi><mi mathvariant="normal">进</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">勾</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">然</mi><mi mathvariant="normal">后</mi><mi mathvariant="normal">确</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">返</mi><mi mathvariant="normal">回</mi><mi mathvariant="normal">。</mi><mn>6</mn><mi mathvariant="normal">、</mi><mi mathvariant="normal">再</mi><mi mathvariant="normal">将</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">夹</mi><mi mathvariant="normal">路</mi><mi mathvariant="normal">径</mi><mi mathvariant="normal">发</mi><mi mathvariant="normal">给</mi><mi mathvariant="normal">别</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">别</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">进</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">你</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">共</mi><mi mathvariant="normal">享</mi><mi mathvariant="normal">即</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">看</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">夹</mi><mi mathvariant="normal">了</mi><mi mathvariant="normal">。</mi><mn>7</mn><mi mathvariant="normal">、</mi><mi mathvariant="normal">共</mi><mi mathvariant="normal">享</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">人</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">运</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">上</mi><mi mathvariant="normal">直</mi><mi mathvariant="normal">接</mi><mi mathvariant="normal">打</mi><mi mathvariant="normal">开</mi><mi mathvariant="normal">我</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">电</mi><mi mathvariant="normal">脑</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">上</mi><mi mathvariant="normal">面</mi><mi mathvariant="normal">输</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">相</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">地</mi><mi mathvariant="normal">址</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">如</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">‘</mi><mi mathvariant="normal">”</mi><mspace linebreak="newline"></mspace><mi>u</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi mathvariant="normal">$</mi><mi>t</mi><mi>e</mi><mi>s</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">&quot;符号，即可隐藏该文件夹，其他人看不到该文件夹。  
+(3)用户限制人数，若只给2个人看，就设定2。  
+4、若共享的人数较多，担心文件被破解的话，可在文件名后面加一些数字或英文，但切勿告诉别人文件名全称。  
+5、若共享对象要修改权限的话，可点击权限，对everyone的权限进行勾选，然后确定返回。  
+6、再将文件夹路径发给别人，别人进入你的共享即可看到文件夹了。  
+7、共享的人可在运行上直接打开我的电脑，在上面输入相应的地址，如：`”\\user\$test</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">&quot;</span><span class="mord cjk_fallback">符</span><span class="mord cjk_fallback">号</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">即</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">隐</span><span class="mord cjk_fallback">藏</span><span class="mord cjk_fallback">该</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">夹</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">其</span><span class="mord cjk_fallback">他</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">该</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">夹</span><span class="mord cjk_fallback">。</span><span class="mopen">(</span><span class="mord">3</span><span class="mclose">)</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">户</span><span class="mord cjk_fallback">限</span><span class="mord cjk_fallback">制</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">若</span><span class="mord cjk_fallback">只</span><span class="mord cjk_fallback">给</span><span class="mord">2</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">设</span><span class="mord cjk_fallback">定</span><span class="mord">2</span><span class="mord cjk_fallback">。</span><span class="mord">4</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">若</span><span class="mord cjk_fallback">共</span><span class="mord cjk_fallback">享</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">较</span><span class="mord cjk_fallback">多</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">担</span><span class="mord cjk_fallback">心</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">被</span><span class="mord cjk_fallback">破</span><span class="mord cjk_fallback">解</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">话</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">后</span><span class="mord cjk_fallback">面</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">些</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">或</span><span class="mord cjk_fallback">英</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">但</span><span class="mord cjk_fallback">切</span><span class="mord cjk_fallback">勿</span><span class="mord cjk_fallback">告</span><span class="mord cjk_fallback">诉</span><span class="mord cjk_fallback">别</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">全</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">。</span><span class="mord">5</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">若</span><span class="mord cjk_fallback">共</span><span class="mord cjk_fallback">享</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">修</span><span class="mord cjk_fallback">改</span><span class="mord cjk_fallback">权</span><span class="mord cjk_fallback">限</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">话</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">点</span><span class="mord cjk_fallback">击</span><span class="mord cjk_fallback">权</span><span class="mord cjk_fallback">限</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">对</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">权</span><span class="mord cjk_fallback">限</span><span class="mord cjk_fallback">进</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">勾</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">然</span><span class="mord cjk_fallback">后</span><span class="mord cjk_fallback">确</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">返</span><span class="mord cjk_fallback">回</span><span class="mord cjk_fallback">。</span><span class="mord">6</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">再</span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">夹</span><span class="mord cjk_fallback">路</span><span class="mord cjk_fallback">径</span><span class="mord cjk_fallback">发</span><span class="mord cjk_fallback">给</span><span class="mord cjk_fallback">别</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">别</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">进</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">你</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">共</span><span class="mord cjk_fallback">享</span><span class="mord cjk_fallback">即</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">看</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">夹</span><span class="mord cjk_fallback">了</span><span class="mord cjk_fallback">。</span><span class="mord">7</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">共</span><span class="mord cjk_fallback">享</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">人</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">运</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">直</span><span class="mord cjk_fallback">接</span><span class="mord cjk_fallback">打</span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">电</span><span class="mord cjk_fallback">脑</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">面</span><span class="mord cjk_fallback">输</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">相</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">地</span><span class="mord cjk_fallback">址</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">：</span><span class="mord">‘</span><span class="mord">”</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.80556em;vertical-align:-0.05556em;"></span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">$</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span></span></span></span>“<code>即可查看该文件夹。 8、为方便共享人打开文件，可增加快捷方式，右键桌面-新建-快捷方式，然后在文件夹的地址栏中输入</code>”\user$test$“`,再点击下一步-完成即可。<br>
+<img src="http://a1.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/cs39UI2eqF1Safwmj5HnpIlasB14VKpKYQWpWBOWqjM!/b/dDQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=FgJHAgAAAAADIFQ!&amp;tl=1&amp;su=0206918449&amp;tm=1553338800&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【编程】迁移Sublime Text 3插件和配置在其他电脑上使用]]></title>
+        <id>https://eva793.github.io//post/2018-12-16-【编程】迁移Sublime Text 3插件和配置在其他电脑上使用</id>
+        <link href="https://eva793.github.io//post/2018-12-16-【编程】迁移Sublime Text 3插件和配置在其他电脑上使用">
+        </link>
+        <updated>2018-12-16T08:11:00.000Z</updated>
+        <content type="html"><![CDATA[<p>1.打开需要迁移的sublime text 3软件<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/Yuo1unTG*x9Q52ayZu0CVk6dxmI7AyxwXYFbpcyn*EY!/b/dHoBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;t=5&amp;tl=3&amp;su=024867089&amp;tm=1555228800&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+2.在弹出窗口点击进入上一个目录，拷贝整个Packages文件夹以及Installed Packages文件夹。<br>
+<img src="http://a1.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/fPi5Pd.8iKMa4Uk1StG8k0ISyEDnNbZCUjF5.V5SKrg!/b/dAwBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;t=5&amp;tl=3&amp;su=0233288929&amp;tm=1555228800&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+3.在需要迁移的电脑上，同样安装Sublime Text 3，将拷贝的两个文件夹添加到步骤2的路径中，重启Sublime Text 3就完成了。<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/ZJwLuk4lnez2WL*zPBv*BP8dk3Suu551bp6DYWVb3Bs!/b/dOYAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;t=5&amp;tl=3&amp;su=0182438881&amp;tm=1555228800&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/XASS54vFYF*Hi29SOL4PdhjF3IFSuRxcqG5QeCuLdRc!/o/dMMAAAAAAAAA&amp;bo=WwRDAlsEQwIDEDU!" alt=""></p>
 ]]></content>
     </entry>
     <entry>
