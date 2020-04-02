@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【Software】使用Github搭建个人博客 | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://eva793.github.io//favicon.ico?v=1570463635704">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://eva793.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://eva793.github.io/">
+        <img src="https://eva793.github.io//images/avatar.png?v=1570463635704" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://eva793.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">【Software】使用Github搭建个人博客</h2>
+            <div class="post-date">2019-02-25</div>
+            
+            <div class="post-content">
+              <p><strong>博客模版下载地址</strong><br>
+<a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a><br>
+<a href="https://github.com/Simpleyyt/jekyll-jacman">https://github.com/Simpleyyt/jekyll-jacman</a><br>
+<a href="https://github.com/codeasashu/hcz-jekyll-blog">https://github.com/codeasashu/hcz-jekyll-blog</a></p>
+<p><strong>一、创建Github仓库</strong><br>
+先登陆Github账号,如下图新建一个仓库<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/tmAY1*Uz4Bv*DCDMg1UA5prkQdNhvbSqzH8eGixu4KY!/o/dDYBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=qwJsAasCbAEDEDU!&amp;tl=1&amp;su=044720545&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/Gwbkp2XqrxRugyLAEdRooXO7La.eGhpfI96OgryK66I!/o/dDYBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=egJSAXoCUgEDEDU!&amp;tl=1&amp;su=028536049&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<code>Repository name就是你的仓库名,这个仓库名必须按(帐户名.github.io)格式来写,到时候访问的地址就是这个了,至于下面的Initialize this repository with a README( 使用 README.md 初始化仓库这将让您可以立刻克隆该仓库到您的电脑。如果您要提交已有的仓库，请忽略这个选项)</code><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/qa0AWqGcOyEpRRovsf6vNPtYdYhTmPWtZvhdyobwfl8!/o/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXYAlYF2AIDIAU!&amp;tl=1&amp;su=021208833&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>二、将GitHub仓库克隆到本地</strong><br>
+1.在自己的电脑上找一个目录来作为你本地的仓库,比如我的是”D:\GitHub”,那么就在GitHub文件夹下初始化仓库.<br>
+2.初始化仓库的方式有两种,一种是用git的图形化界面来创建,另一种是用git命令来初始化,这里我使用图形化界面的方式来创建(先下载desktop github然后安装，desktop github新版不支持Windows 32位系统)<br>
+desktop github下载地址<br>
+<a href="https://desktop.github.com/">https://desktop.github.com/</a><br>
+登入到GitHub<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/vQMvgZ7pfIjDE.MzZsaGcfewu3JSXJO11eJF.nyvPHE!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=vwOVAr8DlQIDMBU!&amp;tl=1&amp;su=0182371809&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+向GitHub提交统计数据可不勾<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/3eP6kBUk7CBSk6SLUf9CZycRKQBf7*5YJEzrxrbq2GI!/o/dFMBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=wgOVAsIDlQIDMBU!&amp;tl=1&amp;su=0110439745&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/HSuIxscKJqTIjyvDtQQnbndT5ui030UeV17KKEkS3TU!/o/dMIAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXXAlYF1wIDEDU!&amp;tl=1&amp;su=017684945&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/rUJA*MjAXmz.RE.GTWNHsJ9HdRrej6ehuqEedjScIAU!/o/dDQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=8gSgAvIEoAIDIAU!&amp;tl=1&amp;su=0205845697&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+克隆中等会<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/EWV5ilSfUz.*MBff6P*t6GbkoRYdM*WDjMZjJ*fRf8g!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXYAlYF2AIDEDU!&amp;tl=1&amp;su=0159959169&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+完成<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/H8bG5Ein8awOph0KkJsylp6qT8Q9XU9MqXj481JdISU!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXUAlYF1AIDEDU!&amp;tl=1&amp;su=0230474961&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<strong>三、将网页传到GitHub上</strong><br>
+1.在本地的路径下放入文件<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/CyAjfqukp1304o7bIVzBC.rOYddUrXSzAdM23JaVf2U!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=2gJcAtoCXAIDEDU!&amp;tl=1&amp;su=0263285937&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+提交备注（给提交的文件添加个摘要信息）<br>
+furst push<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/pvI3WikkaVH1QgeLzXMEPNVwyCZOTfNe2xhHQyXiqog!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXYAlYF2AIDEDU!&amp;tl=1&amp;su=0129619153&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+2.然后回到网页这刷新下就可以了<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/it7SSmFD0VZwvyDJFYtilXimfk*HRs8d50*T.d*sONM!/o/dDQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXUAlYF1AIDEDU!&amp;tl=1&amp;su=0214101793&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<strong>四、浏览自己的网页</strong><br>
+访问自己上传的网页(点自己的仓库-设置  往下拉)<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/2dAtNdcTecMw7gPAjjeNzkxdCQcoWN3UMUZhe9HrjWg!/o/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=8QOjAPEDowADEDU!&amp;tl=1&amp;su=0232018353&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+然后就可以通过GitHub提供的这个网址访问自己的博客了<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/VJ0fICRzY43ZK591.anx8zfW3sMyNS7VLH0C4VtomAY!/o/dFQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=wAL7AMAC.wADEDU!&amp;tl=1&amp;su=0268041425&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/.DCDzaYjz8f17vCeRiWeAHcC33QOwk4l1K4fGbrk5ak!/o/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=VgXaAlYF2gIDEDU!&amp;tl=1&amp;su=0166572849&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>【需要使用Markdown编辑器写博客】</strong><br>
+第一步:去JekyllThemes下载一个自己喜欢的模板<br>
+第二步:按照之前的步骤把下载好的模板上传到自己的Github仓库中<br>
+第三步:在_posts文件夹中放入自己写好的博客,文件名必须是日期-标题名,例如:2019-01-01-我的第一篇博客<br>
+第四步:上传博客到Github中即可访问自己的博客<br>
+<img src="http://r.photo.store.qq.com/psb?/57f6398e-db93-428d-8871-6d2527ad188f/dV0FGUcNRaFWFKAAsldsvxZ7wFjL93nalP5vWHUWa6c!/o/dLkAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=2wO1AdsDtQEDEDU!&amp;tl=1&amp;su=0119672833&amp;tm=1553403600&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://eva793.github.io//tag/vuUkBbs_ba" class="tag">
+                    Github搭建个人博客
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://eva793.github.io//post/2019-02-24-【Software】GitHub 汉化插件安装">
+                  <h3 class="post-title">
+                    【Software】GitHub 汉化插件安装
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

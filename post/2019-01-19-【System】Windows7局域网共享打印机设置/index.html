@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【System】Windows7局域网共享打印机设置 | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://eva793.github.io//favicon.ico?v=1570463635704">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://eva793.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://eva793.github.io/">
+        <img src="https://eva793.github.io//images/avatar.png?v=1570463635704" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://eva793.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">【System】Windows7局域网共享打印机设置</h2>
+            <div class="post-date">2019-01-19</div>
+            
+            <div class="post-content">
+              <p>Windows7局域网共享打印机设置分两步：<br>
+（不同运营商和不同网段可以利用无线路由器组成局域网进行打印机共享）</p>
+<p>①目标打印机设置（关闭密码保护共享和启动Guest用户、共享打印机选项设置）<br>
+②在其它计算机上添加目标打印机<br>
+<strong><code>注意事项：</code></strong><br>
+<strong><code>1.路由器或光钎猫接口</code></strong><br>
+<strong><code>2.网络状态是否相同</code></strong><br>
+<strong><code>3.防火墙</code></strong><br>
+<strong><code>4.关于共享之类的设置是否恰当</code></strong></p>
+<p><strong>一、关闭密码保护共享和启用Guest用户</strong><br>
+1、开启“网络和共享中心”，选中“更改高级共享设置”。<br>
+2、在“启用网络发现”和“启用文件和打印机共享”前勾选，再保存。<br>
+3、在“密码保护的共享”-“关闭密码保护共享”。<br>
+4、右击“计算机图标”——选择“管理”<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/qrhdY.z*frSfFcuZrjiIDj6QRT0OmLzM5dgCvCQT*Ok!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgIzAQAAAAADEC8!&amp;tl=1&amp;su=0132571249&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>5、在“本地用户和组”中找到“用户”，再找到“Guset”<br>
+<img src="http://a2.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/VLuy0cxylxbqriNzVZSeDvhCzIUo2payFKxMO53yTeI!/b/dDEBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=gQJJAQAAAAADEP4!&amp;tl=1&amp;su=0237801057&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>6、右击“Guest”——选择属性——把“账户已禁用”前的勾去掉，点击确定<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/lLYHzgeyEZ6lrgIcthh1vq.hlHh2F.XawGKK*wdTBFU!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLlAQAAAAADEPk!&amp;tl=1&amp;su=0259013153&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>目标打印机共享设置（如果同时需要给32、64为系统做共享打印机，两个版本驱动都需要安装）</strong><br>
+7、“开始”—选择“设备和打印机”<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/YjD00Fy.mnyOzarXeco2PEgA6uNv.afiJi4ZMAeMWU0!/b/dFMBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=mAEAAgAAAAADEK4!&amp;tl=1&amp;su=0148658705&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>8、选中目标打印机（前提是打印机已正确安装），单击鼠标右键打开菜单，选择“打印机属性”<br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/y8ZQgzXNFqCZIV5pGSAc7TyrwLVcgsqngLjHg7WRJqU!/b/dDcBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLhAQAAAAADIM0!&amp;tl=1&amp;su=090298161&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>9、 选择“共享”选项卡，选中“共享这台打印机”并设置共享名，然后确定。<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/QJPuEfgfHgYDUNoMbpSxSK6fubcZtlA7sdfBTrdUdMM!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLdAQAAAAADEME!&amp;tl=1&amp;su=0190120097&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p><strong>二、在其它计算机添加目标打印机</strong></p>
+<p>1、 打开“资源管理器”，在地址栏输入<code>\</code>共享打印机的IP地址， 例如：<code>\\192.168.1.4</code><br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/uQX508UBl1Arns.LvOk05qIFReBZsKsh8Le9P0WH.gw!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgIdAQAAAAADEAE!&amp;tl=1&amp;su=0122010721&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>注：有些 XP 系统可能一些策略没有打开，会出现不能正常访问的情况，可试着做如下的处理：<br>
+1） 在组策略中设置，安全策略。开始--运行--gpedit.msc--计算机配置--windows 设置--安全设置--本地策略--“用户权力指派”，双击右边的“从网络访问此计算机”，保证其中有 Everyone， 再双击左边的“拒绝从网络访问此计算机”，保证其是空的。<br>
+2）选择左边的“本地策略”-“安全选项”<br>
+a.确认右边的“网络访问：本地帐户的共享与安全模式”为“经典”；<br>
+b.确认右边的“ Microsoft 网络客户：为通讯启用数字签名（总是）”为“已停用”；<br>
+c.确认右边的“ Microsoft 网络客户：为通讯启用数字签名（如果服务器允许）”为“已启用”；<br>
+d.确认右边的“ Microsoft 网络服务器：为通讯启用数字签名（总是）”为“已停用”；<br>
+e.确认右边的“ Microsoft 网络服务器：为通讯启用数字签名（如果服务器允许）”为“已启用”。</p>
+<p>2、 选中共享打印机， 单击鼠标右键打开快显菜单，选择“连接”， 进行安装。<br>
+<img src="http://a3.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/ayJ4fOKYcjYwlh1YVUqSrAWyLLzPswXgmld00CDNGcM!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgJwAQAAAAADEGw!&amp;tl=1&amp;su=058591153&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+<p>3、“控制面板”-“硬件和声音”-“设备和打印机”，选择刚装好的打印机， 单击鼠标右键，选择“打印机属性”，单击“打印测试页”， 正常打印， 说明安装成功。<br>
+<img src="http://a1.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/J3nyNT1V6qjpGNTlefQDWjAQaFpjPRNMGZcQ9QCcu2g!/b/dFQBAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=JAISAgAAAAADEAM!&amp;tl=1&amp;su=078400817&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""><br>
+<img src="http://a4.qpic.cn/psb?/57f6398e-db93-428d-8871-6d2527ad188f/*zyOXddAGWu6.3kjM2QLw3df1AMjHaim5VT*nACptO4!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=KgLaAQAAAAADEMY!&amp;tl=1&amp;su=091155473&amp;tm=1553306400&amp;sce=0-12-12&amp;rf=2-9" alt=""></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://eva793.github.io//tag/lZPmbmgfQG" class="tag">
+                    Windows 7打印机共享设置
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://eva793.github.io//post/2019-01-19-【System】Win7设置局域网共享">
+                  <h3 class="post-title">
+                    【System】Win7设置局域网共享
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
